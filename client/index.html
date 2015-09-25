@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="/style/flexboxgrid.min.css">
+    <link rel="stylesheet" href="/style/style.css">
+
+    <script src="main.js"></script>
+    <script src="breeze.debug.js"></script>
+    <script src="scripts/breeze-client/build/adapters/breeze.bridge.angular.js"></script>
+</head>
+<body>
+
+<header>
+    <nav class="row">
+    <span class="col-xs-3">
+    </span>
+    <span class="col-xs-3">
+    </span>
+
+    <span class="col-xs-6">
+      <span class="box">
+        <a ui-sref="app.home">Home</a>
+        |
+        <a ui-sref="app.home.items">Items</a>
+      </span>
+    </span>
+    </nav>
+</header>
+<div ui-view id="app-content" ></div>
+
+</body>
+</html>

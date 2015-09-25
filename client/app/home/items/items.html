@@ -1,0 +1,37 @@
+<section class="row main-row" ng-controller="ItemsController as vm">
+    <div class="col-xs-3 sidebar">
+        <button ng-click="vm.fill();">Fill</button>
+        <div class="box" ui-view>
+            <ul>
+                <li data-ng-repeat="item in vm.items" ng-click="vm.selectItem(item)">
+                    {{ item.name }}
+                </li>
+            </ul>
+        </div>
+        <div class="box" ui-view>
+            <button ng-click="vm.nextPage();">Next</button>
+        </div>
+    </div>
+    <div class="col-xs-9 content">
+        <section class="row around-xs content" >
+            <div class="row">
+                <div class="col-xs">
+                    Item Id
+                </div>
+                <div class="col-xs">
+                    {{vm.item.item_id}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    Item Name
+                </div>
+                <div class="col-xs">
+                    {{vm.item.name}}
+                </div>
+            </div>
+
+        </section>
+        <button ng-click="vm.updateItem(vm.item)">Update</button>
+    </div>
+</section>

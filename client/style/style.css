@@ -1,0 +1,124 @@
+body, html, main, #app-content, .sidebar, .content, .main-row {
+    height: 100%;
+}
+
+#app-content {
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+}
+
+body * {
+    box-sizing: border-box;
+    color: black;
+}
+
+.content {
+    background-color: grey;
+    width: 100%;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    background-color: #c67605;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.sidebar {
+    background-color: #dd514c;
+    border-right: 1px solid rgba(0,0,0,0.3);
+}
+
+.card {
+    width: 180px;
+    height: 110px;
+    background-color: grey;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: block;
+}
+
+.fade.ng-enter {
+    transition: 2s all;
+    opacity: 0;
+}
+
+.fade.ng-enter-active {
+    opacity: 1;
+}
+
+.fade.ng-leave{
+    transition: 2s linear all;
+    opacity:1
+}
+
+.fade.ng-leave-active {
+    opacity: 0;
+}
+
+.rotate {
+    animation: rotate 2s ease-in-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform-origin: center;
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform-origin: center;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+/*.card:hover {*/
+/*animation: grow 2s*/
+/*}*/
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+
+    50%{
+        background: yellow;
+    }
+
+    70% {
+        transform: rotate(90deg);
+    }
+
+    80% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: scale(1.2);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+}
+
+.bin {
+    height: 400px;
+    width: 100%;
+    border: 3px solid #4a148C;
+}
+
+.item {
+    transition: all 0.2s ease;
+}
+
+.drag {
+    opacity: 0.6;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.over {
+    background-color: #FF80AB;
+}
